@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="/" method="POST">
+
+  <label>Date:
+    <br>
+    From:
+    <input type="date" name="from_date" min="1953-05-02">
+    To:
+    <input type="date" name="to_date" min="1953-05-02">
+  </label>
+  <br>
+  <label>Disaster Type:
+    <select multiple class="form-control" name="disasters">
+      <option>Chemical</option>
+      <option>Coastal Storm</option>
+      <option>Dam/Levee Break</option>
+      <option>Drought</option>
+      <option>Earthquake</option>
+      <option>Fire</option>
+      <option>Fishing Losses</option>
+      <option>Flood</option>
+      <option>Freezing</option>
+      <option>Human Cause</option>
+      <option>Hurricane</option>
+      <option>Mud/Landslide</option>
+      <option>Other</option>
+      <option>Severe Ice Storm</option>
+      <option>Severe Storm(s)</option>
+      <option>Snow</option>
+      <option>Terrorist</option>
+      <option>Tornado</option>
+      <option>Toxic Substances</option>
+      <option>Tsunami</option>
+      <option>Typhoon</option>
+      <option>Volcano</option>
+    </select>
+  </label>
+  <br>
+
+  <input class="btn btn-default submit-btn" type="submit">
+
+  </form>
+
+* Note: Max 1000 records returned.
+<br>
+
+<div id='map' style='width: 600px; height: 400px;'></div>
+<script src="/static/js/secret.js"></script>
+<script src="/static/js/us-states.js"></script>
+<script src="/static/js/map.js"></script>
+
+
+{% endblock %}
