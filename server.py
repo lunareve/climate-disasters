@@ -1,12 +1,12 @@
 """FEMA disaster declarations summaries."""
-
 from jinja2 import StrictUndefined
 
 from flask import Flask, jsonify, render_template, redirect, request, flash, session
 from flask_debugtoolbar import DebugToolbarExtension
-
+import sys
 import fema_api as fema
 from disaster_helper import count_disasters
+PortHeroku=int(sys.argv[1])
 
 app = Flask(__name__)
 
@@ -46,4 +46,4 @@ if __name__ == "__main__":
     # DebugToolbarExtension(app)
 
 
-    app.run(host='0.0.0.0')
+    app.run(port=PortHeroku, host='0.0.0.0')
