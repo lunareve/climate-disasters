@@ -3,6 +3,7 @@
 // Add each state as a layer on line 40.
 // Submit form data and use results as fill opacity line 79-102.
 
+mapboxgl.accessToken = 'pk.eyJ1IjoiY2Fwcmlwb3QiLCJhIjoiY2pjMDJqcDhsMDQ2MzJ4bW85MTR0YXBzYiJ9.Ag9mIZTDONNN9JdN2kW76g';
 var map = new mapboxgl.Map({
   container: 'map',
   maxZoom: 5.5,
